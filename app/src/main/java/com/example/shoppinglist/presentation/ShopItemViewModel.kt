@@ -41,7 +41,7 @@ class ShopItemViewModel(
     fun getShopItem(shopItemId: Int) {
         viewModelScope.launch {
             val item = getShopItemUseCase.getShopItem(shopItemId)
-            _shopItem.postValue(item)
+            _shopItem.value = item
         }
     }
 
