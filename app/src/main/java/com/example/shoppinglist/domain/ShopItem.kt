@@ -1,6 +1,8 @@
 package com.example.shoppinglist.domain
 
-data class ShopItem(
+import javax.inject.Inject
+
+data class ShopItem @Inject constructor(
     val name: String,
     val count: Int,
     val enabled: Boolean,
